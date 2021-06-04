@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+.flag {
+    width: 50px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.mr-4 {
+    margin-right: 4px;
+}
+
+.container {
+    padding: 10px;
+    width: 95%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(241, 241, 240, 0.8);
+    box-shadow: 0px 0px 10px rgb(192, 192, 192);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 600px;
+}

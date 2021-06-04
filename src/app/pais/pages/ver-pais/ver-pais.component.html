@@ -1,0 +1,54 @@
+<div *ngIf="!pais, else divPais" class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+</div>
+
+<ng-template #divPais>
+    <div class="container">
+        <div class="card-deck">
+
+            <div class="w-100 d-none d-md-block d-lg-none">
+                <!-- wrap every 3 on md-->
+            </div>
+            <div class="card mb-4">
+                <img class="card-img-top img-fluid" id="flag-pais" [src]="pais.flag" alt="Card image cap">
+                <br>
+                <h4 class="card-title">{{pais.name}}</h4>
+                <br>
+                <div class="table-responsive-sm">
+                    <table class="table">
+
+                        <thead>
+                            <tr>
+
+                                <th scope="col">Capital</th>
+                                <th scope="col">Poblacion</th>
+                                <th scope="col">Moneda</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+
+                                <td>{{pais.capital}}</td>
+                                <td>{{pais.population|number}}</td>
+                                <td>{{pais.currencies[0].name}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="badge bg-primary mr-4">{{pais.translations.br}}</span>
+                        <span class="badge bg-primary mr-4">{{pais.translations.fr}}</span>
+                        <span class="badge bg-primary mr-4">{{pais.translations.it}}</span>
+                        <span class="badge bg-primary mr-4">{{pais.translations.ja}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</ng-template>

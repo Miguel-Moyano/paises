@@ -1,0 +1,20 @@
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Por pais</h2>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <app-pais-input (onEnter)="buscar($event)" placeholder="Buscar por capital..."></app-pais-input>
+        </div>
+    </div>
+    <hr>
+    <div class="alert alert-danger" *ngIf="errorBusqueda">
+        No se encontro nada con el termino {{termino}}
+    </div>
+</div>
+
+
+<div class="row" *ngIf="p.length > 0">
+    <div class="col table-responsive">
+        <app-table-result-paises [paises]="p"></app-table-result-paises>
+    </div>
+</div>
